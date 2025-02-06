@@ -23,6 +23,10 @@ Matiz - udało się zainstalować. Nie działają tapety, bo nikki gapps mi nadp
 16. *miflash_unlock-en-6.5.224.28/*
 17. *XMT2_Win_Setup_20.7.28.zip* - open source program do obsługi xiaomi, jeśli jest problem z widocznością telefonu w trybie fastboot, to ten program pobierze potrzebne sterowniki i umożliwi połączenie
 18. *XMT2_Win_Setup_20.7.28.exe*
+19. *GCam_7.3.018_Urnyx05-v2.5.apk* - podobno najlepsza apka GCam dla Redmi Note 8T
+20. *GCam_configs/* - pliki konfiguracyjne do GCam
+21. *GCAM-load-config.webp* - wideo instrukcja instalacji plików config do GCam
+22. *GCam-folders.webp* - struktura folderów do configów GCam
 
 # CrDroid strona
 https://crdroid.net/downloads#google_vignette
@@ -41,7 +45,7 @@ https://nikgapps.com/
 **'Install Official crDroid.mp4'**
 [inny model - z tego korzystałem i akcja zakończyła się sukcesem](https://www.youtube.com/watch?v=2t71pAggh1U&t=259s)
 
-#
+## Unlock telefonu
 1. Włączyć debuggowanie USB i OEM unlocking
 2. podłączyć telefon, otworzyć terminal i wpisać
 adb reboot bootloader
@@ -49,11 +53,62 @@ adb reboot bootloader
 zalogować się
 kliknąć Unlock
 czasem trzeba czekać ileś godzin, np ja musiałem czekać 168 h
+jeśli program xiaomi nie działa, to próbujemy z XMT2_Win_Setup_20.7.28.exe
 
+## Flashowanie OrangeFox
+to_do
 
+## Flashowanie nowego systemu
+to_do
 
 skopiować recovery?
 
 fastboot flash recovery recovery.img
 fastboot reboot
 od razu po tej komendzie przytrzymuję volume up na telefonie
+
+# Aparat GCam
+Pixel Camera od Googla
+[ciekawy wątek na XDA](https://xdaforums.com/t/best-gcam-mod-for-redmi-note-8.3970675/)
+[podobno najlepszy GCam i config na Redmi Note 8T](https://www.celsoazevedo.com/files/android/google-camera/f/changelog1500/)
+*jakiś typ przetestował z 20 i mówi, że ten jest najlepszy*
+Apkę instaluje się standardowo.
+
+>How to Load & Save XML Configs
+>
+>Some GCam versions support import/export of .xml files, allowing users to quickly load the best settings for their phone.
+>
+>Config files are stored inside a folder, which needs to be created manually using a file manager or automatically by saving your config:
+>
+> - GCam 8.x: /GCam/Configs8/
+> - GCam 7.x: /GCam/Configs7/
+> - GCam 6.x: /GCam/Configs/
+>
+>⚠️ To load a config, move the .xml file into this folder. Check instructions below.
+>
+>⚠️ Some versions use a different directory. This is usually mentioned on the configs/changelog page (example).
+>
+>The top folder, /GCam/, must be created on the same level as the DCIM, Downloads, etc, folders. Example:
+>
+><img href="GCam-folders.webp"/>
+>
+>How to load / import .xml files »
+>
+>It's very easy:
+>
+>1. Create the folder for the GCam version you're using.
+>2. Move the .xml file into this folder.
+>3. ⚠️ Android 11 and above: You may have to allow GCam to "allow management of all files" inside the app permissions → files and media.
+>4. Open GCam.
+>5. Double click the dark area around the shutter button.
+>6. Select the config (.xml file) and "restore" (sometimes you have to do it twice).
+>
+>Video guide:
+>
+><img href="GCAM-load-config.webp"/>
+
+pliki konfiguracyjne - twórca uważa, że są ułożone w kolejności od najlepszego do najgorszego:
+- *RemiNote8_bestxmlV1.0.xml*
+- *MTX-trCam-V5-Natural-1.xml*
+- *xiaomi-redmi-note-8-by-makkoro.xml*
+- *pyur_urnyx05_7.3v1.8night.xml*
