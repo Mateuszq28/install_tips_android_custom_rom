@@ -1,7 +1,7 @@
 # Recenzja softu
 *crDroidAndroid-14.0-20240819-ginkgo-v10.7* \
 *Xiaomi Redmi Note 8T* \
-Matiz - udało się zainstalować. Nie działają tapety, bo nikki gapps mi nadpisało luncher i tapety? Jeszcze robienie screenshota gestem 3 palców nie działa - to też może być wina, że w wersji GApps Stock domyślny luncher apek jest zamieniony na Pixel Luncher. A tak ogólnie to a początku byłem zachwycony. Potem wszystko wróciło do normy, to znaczy telefon tnie się jak cholera. No ale i tak ma już 5 lat. Odinstalowałem część apek, wymusiłem zakończenie pracy i przestawiłem na "disable" w ustawienia/apps i jest trochę lepiej - podobno trzeba tak zamykać apki, to telefon lepiej chodzi. Ogólnie szału nie ma. Następnym razem spróbowałbym wersję Nikki Gapps najmniejszą (core) zamiast "Stock". \
+Matiz - udało się zainstalować. Nie działają tapety, bo nikki gapps mi nadpisało luncher i tapety? Jeszcze robienie screenshota gestem 3 palców nie działa - to też może być wina, że w wersji GApps Stock domyślny luncher apek jest zamieniony na Pixel Luncher. A tak ogólnie to a początku byłem zachwycony. Potem wszystko wróciło do normy, to znaczy telefon tnie się jak cholera. No ale i tak ma już 5 lat. Odinstalowałem część apek, wymusiłem zakończenie pracy i przestawiłem na "disable" w ustawienia/apps i jest trochę lepiej - podobno trzeba tak zamykać apki, to telefon lepiej chodzi. Ogólnie szału nie ma. Następnym razem spróbowałbym wersję Nikki Gapps najmniejszą (core) zamiast "Stock".
 
 # Pliki
 1. *info_mm.md* - ten plik
@@ -31,13 +31,13 @@ Matiz - udało się zainstalować. Nie działają tapety, bo nikki gapps mi nadp
 # CrDroid strona
 https://crdroid.net/downloads#google_vignette \
 https://crdroid.net/ginkgo/10 \
-Forum XDA \
+Forum XDA
 
 # Aplikacje Google
 https://nikgapps.com/ \
-(na stronie crDroid też jest link od razu przy obrazie systemu) \
+(na stronie crDroid też jest link od razu przy obrazie systemu)
 
-# Działania do wykonania
+# Tutoriale
 *Xiaomi Note 8 (Ginkgo) & Note 8T (Willow) : Tutorial Howto Root Magisk using TWRP* \
 **'How to Root Magisk using TWRP.mp4'** \
 [hindus - ten sam model](https://www.youtube.com/watch?v=N_TbR2elBCE&t=101s) \
@@ -46,15 +46,14 @@ https://nikgapps.com/ \
 [inny model - z tego korzystałem i akcja zakończyła się sukcesem](https://www.youtube.com/watch?v=2t71pAggh1U&t=259s) \
 
 ## Unlock telefonu
-(to jako efekt uboczny usunie wszystkie dane z telefonu) \
+(to jako efekt uboczny usunie wszystkie dane z telefonu)
 1. Włączyć debuggowanie USB i OEM unlocking
-2. podłączyć telefon, otworzyć terminal i wpisać
-adb reboot bootloader \
+2. podłączyć telefon, otworzyć terminal i wpisać adb reboot bootloader
 3. włączyć miflash_unlock
 zalogować się \
 kliknąć Unlock \
 czasem trzeba czekać ileś godzin, np ja musiałem czekać 168 h \
-jeśli program xiaomi nie działa, to próbujemy z XMT2_Win_Setup_20.7.28.exe \
+jeśli program xiaomi nie działa, to próbujemy z XMT2_Win_Setup_20.7.28.exe
 
 ## Flashowanie OrangeFox i nowego systemu
 1. W telefonie: Włączyć debuggowanie USB i OEM unlocking
@@ -104,7 +103,7 @@ bez zmian, ale wygląda to tak: \
 [ ] Unmount System before installing a ZIP \
 [x] Unmount Vendor before installing a ZIP \
 Swipe to Install \
-Back \
+Back
 20. na kompie: \
 kopiujemy plik *'OrangeFox-ginkgo-stable@R11.1.zip'* \
 wklejamy w głównym folderze telefonu \
@@ -117,7 +116,7 @@ bez zmian, ale wygląda to tak: \
 [ ] Unmount System before installing a ZIP \
 [x] Unmount Vendor before installing a ZIP \
 Swipe to Install \
-(robimy to, bo crDroid nadpisał Recovery swoim własnym recovery i chcemy z powrotem zflashoować OrangeFox jako nasze Recovery) \
+(robimy to, bo crDroid nadpisał Recovery swoim własnym recovery i chcemy z powrotem zflashoować OrangeFox jako nasze Recovery)
 21. Na telefonie: \
 po instalacji powinniśmy znajdować się w pierwszej zakładce (Files) \
 Widzimy tylko folder "Fox" \
@@ -133,7 +132,7 @@ Back \
 Wchodzimy w ostatnie, czwarte, menu (Menu) \
 klikamy Reboot \
 klikamy Recovery \
-teraz w kompie nasz telefon powinien być niewidoczny - nie da się otworzyć folderu \
+teraz w kompie nasz telefon powinien być niewidoczny - nie da się otworzyć folderu
 22. Na telefonie: \
 po instalacji powinniśmy znajdować się w pierwszej zakładce (Files) \
 Widzimy tylko folder "Fox" \
@@ -148,7 +147,7 @@ odklikujemy Enable MTP (ma być wyłączone): \
 Enable MTP [ ] \
 klikamy Enable MTP (ma być włączone): \
 Enable MTP [x] \
-teraz w kompie nasz telefon powinien być z powrotem widoczny \
+teraz w kompie nasz telefon powinien być z powrotem widoczny
 23. Tego kroku nie musiałem robić \
 Nawet nie dało się tego zainstalować \
 Ale w instrukcji jest: \
@@ -167,10 +166,10 @@ Swipe to Install \
 Back \
 Wchodzimy w ostatnie, czwarte, menu (Menu) \
 klikamy Reboot \
-klikamy Recovery \
+klikamy Recovery
 24. na kompie: \
 Kopiujemy wybrane NikGapps.zip na telefon \
-możemy odłączyć telefon od kompa \
+możemy odłączyć telefon od kompa
 25. Klikamy drugie menu i z powrotem pierwsze (Files) \
 Klikamy NikGapps.zip \
 bez zmian, ale wygląda to tak: \
@@ -178,13 +177,13 @@ bez zmian, ale wygląda to tak: \
 [ ] ZIP signature verification \
 [ ] Reflash OrangeFox after flashing a ROM \
 [ ] Unmount System before installing a ZIP \
-[x] Unmount Vendor before installing a ZIP \
+[x] Unmount Vendor before installing a ZIP
 26. na telefonie: \
 Back \
 Trzecie menu (Wipe) \
 zakładka Format Data \
 wpisujemy "yes" \
-Reboot System \
+Reboot System
 27. GOTOWE!
 
 # Aparat GCam
@@ -193,6 +192,7 @@ Pixel Camera od Googla \
 [podobno najlepszy GCam i config na Redmi Note 8T](https://www.celsoazevedo.com/files/android/google-camera/f/changelog1500/) \
 *jakiś typ przetestował z 20 i mówi, że ten jest najlepszy* \
 Apkę instaluje się standardowo. \
+Nieco więcej zachodu jest z configami.
 
 >How to Load & Save XML Configs
 >
