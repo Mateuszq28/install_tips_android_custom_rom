@@ -210,7 +210,7 @@ Apkę instaluje się standardowo. \
 >
 >The top folder, /GCam/, must be created on the same level as the DCIM, Downloads, etc, folders. Example:
 >
-><img href="GCam-folders.webp"/>
+>![GCam-folders.webp](GCam-folders.webp)
 >
 >How to load / import .xml files »
 >
@@ -225,7 +225,7 @@ Apkę instaluje się standardowo. \
 >
 >Video guide:
 >
-><img href="GCAM-load-config.webp"/>
+>![GCAM-load-config.webp](GCAM-load-config.webp)
 
 pliki konfiguracyjne - twórca uważa, że są ułożone w kolejności od najlepszego do najgorszego:
 - *RemiNote8_bestxmlV1.0.xml*
