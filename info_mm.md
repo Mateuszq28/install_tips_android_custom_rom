@@ -43,7 +43,7 @@ https://nikgapps.com/ \
 [hindus - ten sam model](https://www.youtube.com/watch?v=N_TbR2elBCE&t=101s) \
 *Install Official Android 14 crDroid ON Redmi Note 12 4G English* \
 **'Install Official crDroid.mp4'** \
-[inny model - z tego korzystałem i akcja zakończyła się sukcesem](https://www.youtube.com/watch?v=2t71pAggh1U&t=259s) \
+[inny model - z tego korzystałem i akcja zakończyła się sukcesem](https://www.youtube.com/watch?v=2t71pAggh1U&t=259s)
 
 ## Unlock telefonu
 (to jako efekt uboczny usunie wszystkie dane z telefonu)
