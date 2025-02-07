@@ -1,7 +1,7 @@
 # Recenzja softu
 *crDroidAndroid-14.0-20240819-ginkgo-v10.7*
 *Xiaomi Redmi Note 8T*
-Matiz - udało się zainstalować. Nie działają tapety, bo nikki gapps mi nadpisało luncher i tapety? A tak ogólnie to a początku byłem zachwycony. Potem wszystko wróciło do normy, to znaczy telefon tnie się jak cholera. No ale i tak ma już 5 lat. Odinstalowałem część apek, wymusiłem zakończenie pracy i przestawiłem na "disable" w ustawienia/apps i jest trochę lepiej - podobno trzeba tak zamykać apki, to telefon lepiej chodzi. Ogólnie szału nie ma. Następnym razem spróbowałbym wersję Nikki Gapps najmniejszą (core) zamiast "Stock".
+Matiz - udało się zainstalować. Nie działają tapety, bo nikki gapps mi nadpisało luncher i tapety? Jeszcze robienie screenshota gestem 3 palców nie działa - to też może być wina, że w wersji GApps Stock domyślny luncher apek jest zamieniony na Pixel Luncher. A tak ogólnie to a początku byłem zachwycony. Potem wszystko wróciło do normy, to znaczy telefon tnie się jak cholera. No ale i tak ma już 5 lat. Odinstalowałem część apek, wymusiłem zakończenie pracy i przestawiłem na "disable" w ustawienia/apps i jest trochę lepiej - podobno trzeba tak zamykać apki, to telefon lepiej chodzi. Ogólnie szału nie ma. Następnym razem spróbowałbym wersję Nikki Gapps najmniejszą (core) zamiast "Stock".
 
 # Pliki
 1. *info_mm.md* - ten plik
@@ -46,6 +46,7 @@ https://nikgapps.com/
 [inny model - z tego korzystałem i akcja zakończyła się sukcesem](https://www.youtube.com/watch?v=2t71pAggh1U&t=259s)
 
 ## Unlock telefonu
+(to jako efekt uboczny usunie wszystkie dane z telefonu)
 1. Włączyć debuggowanie USB i OEM unlocking
 2. podłączyć telefon, otworzyć terminal i wpisać
 adb reboot bootloader
@@ -55,17 +56,136 @@ kliknąć Unlock
 czasem trzeba czekać ileś godzin, np ja musiałem czekać 168 h
 jeśli program xiaomi nie działa, to próbujemy z XMT2_Win_Setup_20.7.28.exe
 
-## Flashowanie OrangeFox
-to_do
-
-## Flashowanie nowego systemu
-to_do
-
-skopiować recovery?
-
+## Flashowanie OrangeFox i nowego systemu
+1. W telefonie: Włączyć debuggowanie USB i OEM unlocking
+2. Odblokować bootloader (patrz "Unlock telefonu")
+3. Naładować baterię do pełna
+4. Zaktualizować telefon do najwyższej fabrycznej wersji
+5. Wyłączyć telefon
+Na kompie:
+6. rozpakować *platform-tools-latest-windows.zip*
+7. rozpakować *'OrangeFox-ginkgo-stable@R11.1.zip'*
+8. Otworzyć rozpakowany folder *'OrangeFox-ginkgo-stable@R11.1'/* i skopiować *recovery.img*
+9. Otworzyć rozpakowany folder *platform-tools-latest-windows/* i wkleić tam skopiowane w poprzednim kroku *recovery.img*
+10. Lewym przyciskiem myszy kliknąć na *cmd.exe* i wybrać "Run as administrator"
+telefon:
+11. Przycisnąć i przytrzymać "volume down"
+12. [trzymając wciśnięty guzik "volume down"] Podłączyć telefon do komputera kablem
+13. Jak pojawi się logo fastboot, to puszczamy przycisk
+na kompie:
+14. W otworzonym cmd wpisujemy:
 fastboot flash recovery recovery.img
+15. Teraz musimy zbootować telefon do recovery. W tym celu wpisujemy:
 fastboot reboot
-od razu po tej komendzie przytrzymuję volume up na telefonie
+zatwierdzamy enter i w od razu przytrzymujemy "volume up" na telefonie
+Jak pojawi się logo OrangeFox, to puszczamy przycisk
+16. na kompie: otwieramy folder telefonu i sprawdzamy, czy widać nazwy folderów - czy nie są zaszyfrowane
+17. Kopiujemy *crDroidAndroid-14.0-20240819-ginkgo-v10.7.zip* i wrzucamy do głównego folderu na telefonie
+18. na telefonie: 3 menu od lewej (Wipe)
+jak jest do wyboru Wipe i Format Data, to wchodzimy w Wipe
+zaznaczamy:
+([x] - zaznaczone, [ ] - niezaznaczone)
+[x] Dalvik / ART Cache
+[x] Cache
+[ ] Micro SDCard
+[ ] USB-Storage
+[x] Metadata
+[x] Data
+[ ] Internal Storage
+Swipe to Wipe
+Back
+19. dalej na telefonie:
+wchodzimy w pierwsze menu (Files)
+klikamy plik z naszym ROMem (*crDroidAndroid-14.0-20240819-ginkgo-v10.7.zip*)
+bez zmian, ale wygląda to tak:
+[ ] Reboot after installation is complete
+[ ] ZIP signature verification
+[ ] Reflash OrangeFox after flashing a ROM
+[ ] Unmount System before installing a ZIP
+[x] Unmount Vendor before installing a ZIP
+Swipe to Install
+Back
+20. na kompie:
+kopiujemy plik *'OrangeFox-ginkgo-stable@R11.1.zip'*
+wklejamy w głównym folderze telefonu
+klikamy drugie drugie menu i z powrotem klikamy pierwsze menu (Files)
+klikamy plik *'OrangeFox-ginkgo-stable@R11.1.zip'*
+bez zmian, ale wygląda to tak:
+[ ] Reboot after installation is complete
+[ ] ZIP signature verification
+[ ] Reflash OrangeFox after flashing a ROM
+[ ] Unmount System before installing a ZIP
+[x] Unmount Vendor before installing a ZIP
+Swipe to Install
+(robimy to, bo crDroid nadpisał Recovery swoim własnym recovery i chcemy z powrotem zflashoować OrangeFox jako nasze Recovery)
+21. Na telefonie:
+po instalacji powinniśmy znajdować się w pierwszej zakładce (Files)
+Widzimy tylko folder "Fox"
+klikamy strzałkę idź poziom wyżej
+klikamy folder "Data"
+klikamy folder "media"
+tam powinno nic nie być - to znaczy, że mamy zaszyfrowany dysk
+musimy go odszyfrować.
+Wchodzimy w trzecie menu (Wipe)
+zakładka Format Data
+wpisujemy "yes"
+Back
+Wchodzimy w ostatnie, czwarte, menu (Menu)
+klikamy Reboot
+klikamy Recovery
+teraz w kompie nasz telefon powinien być niewidoczny - nie da się otworzyć folderu
+22. Na telefonie:
+po instalacji powinniśmy znajdować się w pierwszej zakładce (Files)
+Widzimy tylko folder "Fox"
+klikamy folder "Data"
+powinno nie być tam widocznego folderu "media", jest tylko "recovery"
+klikamy w trzy kropki po prawej na telefonie u góry
+klikamy Create Folder
+wpisujemy "media"
+Wchodzimy w ostatnie, czwarte, menu (Menu)
+klikamy Mount
+odklikujemy Enable MTP (ma być wyłączone):
+Enable MTP [ ]
+klikamy Enable MTP (ma być włączone):
+Enable MTP [x]
+teraz w kompie nasz telefon powinien być z powrotem widoczny
+23. Tego kroku nie musiałem robić
+Nawet nie dało się tego zainstalować
+Ale w instrukcji jest:
+na kompie:
+skopiować *RO2RW-StableBeta.v3.7.2.1.zip* na telefon
+na telefonie:
+otwieramy media
+klikamy *RO2RW-StableBeta.v3.7.2.1.zip*
+bez zmian, ale wygląda to tak:
+[ ] Reboot after installation is complete
+[ ] ZIP signature verification
+[ ] Reflash OrangeFox after flashing a ROM
+[ ] Unmount System before installing a ZIP
+[x] Unmount Vendor before installing a ZIP
+Swipe to Install
+Back
+Wchodzimy w ostatnie, czwarte, menu (Menu)
+klikamy Reboot
+klikamy Recovery
+24. na kompie:
+Kopiujemy wybrane NikGapps.zip na telefon
+możemy odłączyć telefon od kompa
+25. Klikamy drugie menu i z powrotem pierwsze (Files)
+Klikamy NikGapps.zip
+bez zmian, ale wygląda to tak:
+[ ] Reboot after installation is complete
+[ ] ZIP signature verification
+[ ] Reflash OrangeFox after flashing a ROM
+[ ] Unmount System before installing a ZIP
+[x] Unmount Vendor before installing a ZIP
+26. na telefonie:
+Back
+Trzecie menu (Wipe)
+zakładka Format Data
+wpisujemy "yes"
+Reboot System
+27. GOTOWE!
 
 # Aparat GCam
 Pixel Camera od Googla
