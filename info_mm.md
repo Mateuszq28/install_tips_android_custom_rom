@@ -4,8 +4,8 @@
 Matiz - udało się zainstalować. Nie działają tapety, bo nikki gapps mi nadpisało luncher i tapety? Jeszcze robienie screenshota gestem 3 palców nie działa - to też może być wina, że w wersji GApps Stock domyślny luncher apek jest zamieniony na Pixel Luncher. A tak ogólnie to a początku byłem zachwycony. Potem wszystko wróciło do normy, to znaczy telefon tnie się jak cholera. No ale i tak ma już 5 lat. Odinstalowałem część apek, wymusiłem zakończenie pracy i przestawiłem na "disable" w ustawienia/apps i jest trochę lepiej - podobno trzeba tak zamykać apki, to telefon lepiej chodzi. Ogólnie szału nie ma. Następnym razem spróbowałbym wersję Nikki Gapps najmniejszą (core) zamiast "Stock".
 
 # Pliki
-*w tym folderze, folderze bazowym, są plkiki do Android 14*
-*pliki do Androida 15 - w folderze A15*
+**w tym folderze, folderze bazowym, są plkiki do Android 14**
+**pliki do Androida 15 - w folderze A15**
 1. *info_mm.md* - ten plik
 2. *'Install Official crDroid.mp4'* - lepszy tutorial, ale bez unlock
 3. *'How to Root Magisk using TWRP.mp4'* - gorszy tutorial
