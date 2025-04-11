@@ -234,3 +234,8 @@ pliki konfiguracyjne - twórca uważa, że są ułożone w kolejności od najlep
 - *MTX-trCam-V5-Natural-1.xml*
 - *xiaomi-redmi-note-8-by-makkoro.xml*
 - *pyur_urnyx05_7.3v1.8night.xml*
+
+# Kernel
+Po instalacji ROMu, flashujemy Recovery Orange Fox
+A POTEM NA KONIEC możemy wgrać kompatybilny custom Kernel
+Ja wgrałem Cryo Kernel i całkiem nieźle śmiga
