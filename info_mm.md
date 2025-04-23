@@ -4,7 +4,8 @@
 Matiz - udało się zainstalować. Nie działają tapety, bo nikki gapps mi nadpisało luncher i tapety? Jeszcze robienie screenshota gestem 3 palców nie działa - to też może być wina, że w wersji GApps Stock domyślny luncher apek jest zamieniony na Pixel Luncher. A tak ogólnie to a początku byłem zachwycony. Potem wszystko wróciło do normy, to znaczy telefon tnie się jak cholera. No ale i tak ma już 5 lat. Odinstalowałem część apek, wymusiłem zakończenie pracy i przestawiłem na "disable" w ustawienia/apps i jest trochę lepiej - podobno trzeba tak zamykać apki, to telefon lepiej chodzi. Ogólnie szału nie ma. Następnym razem spróbowałbym wersję Nikki Gapps najmniejszą (core) zamiast "Stock" (wtedy nie podmieni mi lunchera na Pixel Luncher).
 Telefon się losowo wyłączał na tym ROMie (crDroid A14).
 Po resecie i instalacji na Nikki Gapps core zamiast stock tele dalej się losowo wyłączał.
-Po zmianie jądra na Cryo dalej ten sam problem.
+Po zmianie jądra na Cryo dalej ten sam problem. Chodził szybciej, ale się wyłączał.
+Ostatecznie pobrałem i wgrałem stock ROM xiaomi w wersji EU dla Recovery (inna wersja to dla fastboot).
 
 # Pliki
 **w tym folderze, folderze bazowym, są plkiki do Android 14**
